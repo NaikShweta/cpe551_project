@@ -3,6 +3,9 @@ import PySimpleGUI as sg
 
 sg.theme("DarkTeal2")
 
+x = 10
+path = ""
+
 layout = [[sg.T("")], [sg.Text("Choose a file: "), sg.Input(), sg.FileBrowse(key = "-IN-")], [sg.Button("Submit")]]
 
 #create the window
@@ -15,7 +18,9 @@ while True:
   if event == "Exit" or event == sg.WIN_CLOSED:
     break
   elif event == "Submit":
-    print(values["-IN-"])
+    #print(values["-IN-"])
+    path = values["-IN-"]
+    break
     
 window.close()
 
