@@ -11,11 +11,11 @@ from nltk.chunk import ne_chunk
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
 
-#ex = 'European authorities fined Google a record $5.1 billion on Wednesday for abusing its power in the mobi	le phone market and ordered the company to alter its practices'
+ex = 'European authorities fined Google a record $5.1 billion on Wednesday for abusing its power in the mobi	le phone market and ordered the company to alter its practices'
 
-ex = pdfToText.text
+#ex = pdfToText.text
 
-print(ex)
+#print(ex)
 #list of tuples with associated part-of-speech
 
 def preprocess(sent):
@@ -40,4 +40,5 @@ iob_tagged = tree2conlltags(cs)
 
 #recognize named entities using classifier
 ne_tree = ne_chunk(pos_tag(word_tokenize(ex)))
-print(ne_tree)
+#print(ne_tree)
+
