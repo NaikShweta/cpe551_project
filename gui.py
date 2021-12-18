@@ -3,7 +3,6 @@ import PySimpleGUI as sg
 
 sg.theme("DarkTeal2")
 
-x = 10
 path = ""
 
 layout = [[sg.T("")], [sg.Text("Choose a file: "), sg.Input(), sg.FileBrowse(key = "-IN-")], [sg.Button("Submit")]]

@@ -20,7 +20,10 @@ text = Text(win, font=("Calibi, 16"), wrap = NONE, xscrollcommand=h.set)
 text.pack()
 
 #add text in the widgest
-text.insert(END, ner.ne_tree)
+for entry in ner.neMap : 
+  text.insert(END, entry + "\n")
+  for entity in ner.neMap[entry]:
+    text.insert(END,"\t" + entity + "\n")
 
 #attach scrollbar with the text widget
 h.config(command=text.xview)
@@ -28,10 +31,4 @@ h.config(command=text.xview)
 win.mainloop()
 
 
-# creating a function called DataCamp_Tutorial()
-#def DataCamp_Tutorial():
-    #tkinter.Label(window, text = ner.ne_tree).pack()
-
-#tkinter.Button(window, text = "Click Me!", command = DataCamp_Tutorial).pack()
-#window.mainloop()
 
